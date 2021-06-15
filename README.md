@@ -4,6 +4,7 @@ Artificial Neural Network Encoder, A weight engineering approach that extracts e
 README for ANNE
 
 1. prerequisites
+
 ANNE is writen and tested with Python 2.7.10 on RHEL6. It should run on any
 Linux system that supports Python and its dependencies. It requires the 
 following python packages:
