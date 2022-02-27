@@ -9,22 +9,14 @@ ANNE is writen and tested with Python 2.7.10 on RHEL6. It should run on any
 Linux system that supports Python and its dependencies. It requires the 
 following python packages:
 
-h5py	2.5.0
-
-keras	1.1.1
-
-matplotlib	1.5.3
-
-networkx	1.10
-
 numpy	1.11.2
-
 pandas	0.19.1
-
 scipy	0.18.1
-
 sklearn	0.17
-
+h5py	2.5.0
+keras	1.1.1
+matplotlib	1.5.3
+networkx	1.10
 theano	0.9
 
 
