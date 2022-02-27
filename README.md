@@ -68,3 +68,8 @@ config_anne_<project_name>.w1.csv
   GSEA-preranked to explorer the function annotation of learned compact
   representation of the input data.
 
+5. running time
+
+Training of a single model was tested on a NVIDIA TITAN Xp GPU and finished in about 10 minutes. 
+If training using CPU, our code uses 32 CPU cores by default and could take several hours, depending on CPU performance. 
+Minimum memory requirement is 4 GB. Model training progress is written into a log file.
