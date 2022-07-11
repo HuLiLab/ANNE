@@ -18,25 +18,13 @@ b_gpu=False
 hostname=os.environ.get('HOSTNAME', '')
 print('hostname is %s'%hostname)
 hnparts=set(hostname.split('.'))
-#if 'franklin' in hnparts or 'loge' in hnparts or 'orchestra' in hnparts: b_gpu=False
-if 'mayo' in hnparts: b_gpu=False
-else: b_gpu=True
+
 print('b_gpu set to: ', b_gpu)
 
 
-if 'mayo' in hostname:
+if False:
   pass
-  #scriptdir='/home/m143944/pharmacogenomics/gene_drug_2d/5_1_with_keras'#on franklin, mayo
-  #scriptdir='/home/m143944/m143944_syspharm_proj/wd_autoencoder_geneexpr'
-  #sys.path.append(scriptdir)#for path to lib_anne.py
 else:
-  #scriptdir = os.path.abspath(os.path.dirname(os.path.abspath(__file__))+'/..')
-  #scriptdir='/home/hl136/zhangcheng/wd_nn/scripts'#on orchestra, harvard
-  #sys.path.append(scriptdir)#for path to lib_anne.py
-
-  #os.environ['THEANO_FLAGS'] = 'device=gpu,floatX=float32,force_device=true'
-  #os.environ['THEANO_FLAGS'] = 'device=gpu, floatX=float32, dnn.enabled=True, scan.allow_output_prealloc=False, scan.allow_gc=True, optimizer_excluding=more_mem'
-  #os.environ['THEANO_FLAGS'] = 'device=gpu, floatX=float32, dnn.enabled='+str(b_gpu)+', lib.cnmem=0.75, scan.allow_output_prealloc=False, scan.allow_gc=True, optimizer_excluding=more_mem, optimizer=fast_compile, exception_verbosity=high'
   os.environ['THEANO_FLAGS'] = 'device=gpu, floatX=float32, dnn.enabled=True, scan.allow_output_prealloc=False, scan.allow_gc=True, optimizer_excluding=more_mem, optimizer=fast_compile, exception_verbosity=high, optimizer_including=cudnn'
 
 
